@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 // Sample user data
 const sampleUsers = [
   { id: 1, name: 'John Doe', username: 'johndoe', avatar: '👨‍💻' },
-  { id: 2, name: 'Jane Smith', username: 'janesmith', avatar: '👩‍🎨' },
+  { id: 2, name: 'Jane Smith', username: 'janesmith', avatar: '👩‍🎨' }, 
   { id: 3, name: 'Alex Johnson', username: 'alexj', avatar: '🧑‍💼' },
 ];
 
@@ -48,39 +48,6 @@ const samplePosts = [
     shares: 7,
     timeAgo: '1d ago',
     isLiked: false
-  },
-  {
-    id: 4,
-    user: { id: 4, name: 'Sarah Chen', username: 'sarahdev', avatar: '👩‍💻' },
-    content: 'Just completed a 10-hour coding session. My brain is fried but the app is coming along nicely! #codingmarathon #webdevelopment',
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
-    likes: 156,
-    comments: 23,
-    shares: 7,
-    timeAgo: '5h ago',
-    isLiked: false
-  },
-  {
-    id: 5,
-    user: { id: 5, name: 'Mike Johnson', username: 'mikej', avatar: '🧑‍💼' },
-    content: 'The new React 18 features are amazing! The concurrent rendering is a game changer for performance. #reactjs #frontend',
-    image: 'https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
-    likes: 89,
-    comments: 14,
-    shares: 9,
-    timeAgo: '7h ago',
-    isLiked: false
-  },
-  {
-    id: 6,
-    user: { id: 6, name: 'Emma Wilson', username: 'emmacodes', avatar: '👩‍💻' },
-    content: 'After 6 months of learning, I finally landed my first developer job! So excited for this new chapter. #codingjourney #webdev #careerchange',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80',
-    likes: 342,
-    comments: 47,
-    shares: 28,
-    timeAgo: '1d ago',
-    isLiked: true
   },
   {
     id: 4,
