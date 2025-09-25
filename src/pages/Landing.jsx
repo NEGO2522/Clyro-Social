@@ -106,27 +106,27 @@ const Landing = () => {
     };
   }, []);
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-gray-900 text-gray-100">
       {/* Header */}
-      <header className="fixed w-full bg-white/80 backdrop-blur-sm top-0 z-50 border-b border-gray-100 shadow-sm">
+      <header className="fixed w-full bg-gray-800/80 backdrop-blur-sm top-0 z-50 border-b border-gray-700 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20 items-center">
             <div className="flex items-center space-x-6">
               <Link to="/" className="flex-shrink-0 flex items-center group">
-                <span className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                <span className="text-2xl font-bold text-indigo-400 group-hover:text-indigo-300 transition-colors duration-300">
                   Clyro
-                  <span className="block h-0.5 w-0 group-hover:w-full bg-blue-600 transition-all duration-300"></span>
+                  <span className="block h-0.5 w-0 group-hover:w-full bg-indigo-500 transition-all duration-300"></span>
                 </span>
               </Link>
-              <span className="hidden md:inline-flex items-center text-sm text-gray-500">
-                <span className="h-1 w-1 rounded-full bg-gray-300 mr-2"></span>
+              <span className="hidden md:inline-flex items-center text-sm text-gray-400">
+                <span className="h-1 w-1 rounded-full bg-gray-500 mr-2"></span>
                 Connecting people together
               </span>
             </div>
             <div className="flex items-center space-x-4">
               <Link 
                 to="/login" 
-                className="group relative px-6 py-2.5 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 overflow-hidden"
+                className="group relative px-6 py-2.5 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-300 overflow-hidden"
               >
                 <span className="flex items-center">
                   <span className="mr-2">Get Started</span>
@@ -147,15 +147,15 @@ const Landing = () => {
           {/* Image Carousel Section */}
           <div className="relative overflow-hidden py-12">
             <div className="text-center mb-20">
-              <h2 className="text-5xl md:text-6xl font-light text-gray-800 leading-tight">
-                One page. <span className="text-blue-600">Every photo.</span> Every memory.
+              <h2 className="text-5xl md:text-6xl font-light text-gray-100 leading-tight">
+                One page. <span className="text-indigo-400">Every photo.</span> Every memory.
               </h2>
-              <p className="mt-8 text-lg text-gray-500 max-w-2xl mx-auto">
+              <p className="mt-8 text-lg text-gray-400 max-w-2xl mx-auto">
                 Capture, share, and relive your most precious moments in one beautiful space.
               </p>
             </div>
             <div className="mt-16">
-              <div ref={carouselRef} className="relative h-[420px] w-full overflow-hidden rounded-2xl bg-gray-50 border border-gray-100 shadow-inner">
+              <div ref={carouselRef} className="relative h-[420px] w-full overflow-hidden rounded-2xl bg-gray-800 border border-gray-700 shadow-inner">
                 <div className="absolute inset-0 flex items-center">
                   <div className="relative h-full w-full">
                     <div 
@@ -173,7 +173,7 @@ const Landing = () => {
                       ].map((src, index) => (
                         <div 
                           key={index}
-                          className="flex-shrink-0 w-80 h-72 rounded-xl overflow-hidden shadow-md transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl border border-gray-100 bg-white cursor-pointer"
+                          className="flex-shrink-0 w-80 h-72 rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700 bg-gray-800 cursor-pointer"
                           onClick={handleImageClick}
                         >
                           <div className="relative w-full h-full group">
@@ -183,7 +183,7 @@ const Landing = () => {
                               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                               loading="lazy"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                           </div>
                         </div>
                       ))}
@@ -236,17 +236,17 @@ const Landing = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-gray-100 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <footer className="bg-gray-800 border-t border-gray-700 mt-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
           <div className="flex flex-col items-center justify-between md:flex-row">
             <div className="flex items-center space-x-2">
-              <span className="text-xl font-bold text-gray-900">Clyro</span>
-              <span className="h-1 w-1 rounded-full bg-gray-300"></span>
+              <span className="text-indigo-400 font-bold text-xl">Clyro</span>
+              <span className="text-gray-400 text-sm">© {new Date().getFullYear()}</span>
               <p className="text-sm text-gray-500">
                 Connecting people together
               </p>
             </div>
-            <nav className="mt-6 flex space-x-6 md:mt-0">
+            <nav className="mt-4 md:mt-0 flex space-x-4">
               <Link 
                 to="/terms" 
                 className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors duration-200"
@@ -258,6 +258,18 @@ const Landing = () => {
                 className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors duration-200"
               >
                 Privacy Policy
+              </Link>
+              <Link 
+                to="/contact" 
+                className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors duration-200"
+              >
+                Contact Us
+              </Link>
+              <Link 
+                to="/shared-moments" 
+                className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors duration-200"
+              >
+                Shared Moments
               </Link>
             </nav>
           </div>

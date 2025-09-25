@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { getAuth, signOut } from 'firebase/auth';
 import { app } from '../firebase/firebase';
 import { gsap } from 'gsap';
@@ -232,13 +232,13 @@ const Dashboard = () => {
             <div className="space-y-3">
               {suggestedUsers.map(user => (
                 <div key={user.id} className="flex items-center justify-between">
-                  <div className="flex items-center space-x-3">
+                  <Link to={`/${user.username}`} className="flex items-center space-x-3 hover:bg-gray-700 p-2 rounded-lg">
                     <div className="text-2xl">{user.avatar}</div>
                     <div>
                       <p className="text-sm font-medium">{user.name}</p>
                       <p className="text-xs text-gray-400">@{user.username}</p>
                     </div>
-                  </div>
+                  </Link>
                   <button className="text-xs bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 rounded-md transition-colors">
                     Follow
                   </button>
@@ -295,8 +295,14 @@ const Dashboard = () => {
                   <div className="flex items-center space-x-3">
                     <div className="text-3xl">{post.user.avatar}</div>
                     <div>
-                      <h3 className="font-semibold">{post.user.name}</h3>
-                      <p className="text-xs text-gray-400">{post.timeAgo}</p>
+                      <Link to={`/${post.user.username}`} className="hover:underline">
+                        <h3 className="font-semibold">{post.user.name}</h3>
+                      </Link>
+                      <p className="text-xs text-gray-400">
+                        <Link to={`/${post.user.username}`} className="hover:underline">
+                          @{post.user.username} · {post.timeAgo}
+                        </Link>
+                      </p>
                     </div>
                   </div>
                   <button className="text-gray-400 hover:text-gray-600">
