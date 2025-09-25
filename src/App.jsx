@@ -4,6 +4,7 @@ import Landing from './pages/Landing';
 import Login from './components/Login';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
+import Dashboard from './pages/Dashboard';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { app } from './firebase/firebase';
 
@@ -42,7 +43,7 @@ function App() {
             path="/dashboard" 
             element={
               <ProtectedRoute>
-                <div>Dashboard Content</div>
+                <Dashboard />
               </ProtectedRoute>
             } 
           />
